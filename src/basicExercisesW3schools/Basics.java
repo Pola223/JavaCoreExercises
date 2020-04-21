@@ -8,14 +8,15 @@ public class Basics {
 
 
     public void multiplication() {
-        int[] multiplicationAid = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
 
         System.out.println("Please provide a number to multiply: ");
         int number = scanner.nextInt();
 
-        for (int i = 0; i < 10; i++) {
-            System.out.printf("%3d x %2d = %-20d%n", number, multiplicationAid[i], number * multiplicationAid[i]);
+
+        for (int i = 1; i < 11; i++) {
+            System.out.printf("%3d x %2d = %-20d%n", number, i, number * i);
         }
+
     }
 
 
@@ -77,6 +78,7 @@ public class Basics {
 
 
     public long convertDecimalToBinary() {
+
         System.out.println("Provide decimal number to convert to binary number: ");
         long decimal = scanner.nextLong();
         int pow = 0;
@@ -121,19 +123,19 @@ public class Basics {
 
             int mult = 0;
 
-            while ((decimal - Math.pow(16, i)*mult) >= 0) {
+            while ((decimal - Math.pow(16, i) * mult) >= 0) {
                 mult++;
             }
 
             mult--;
 
-            if (mult<10){
+            if (mult < 10) {
                 hex.append(String.valueOf(mult));
             } else {
                 hex.append((char) (55 + mult));
             }
 
-            decimal -= (Math.pow(16, i)*mult);
+            decimal -= (Math.pow(16, i) * mult);
         }
 
         String result = String.valueOf(hex);
@@ -143,9 +145,9 @@ public class Basics {
     }
 
 
-    public long convertDecimalToOct(){
+    public long convertDecimalToOct() {
 
-        System.out.println("Provide decimal number to convert to octadecimal number: ");
+        System.out.println("Provide decimal number to convert to octal number: ");
         long decimal = scanner.nextLong();
         int pow = 0;
 
@@ -160,7 +162,7 @@ public class Basics {
 
             int mult = 0;
 
-            while ((decimal - Math.pow(8, i)*mult) >= 0) {
+            while ((decimal - Math.pow(8, i) * mult) >= 0) {
                 mult++;
             }
 
@@ -168,7 +170,7 @@ public class Basics {
 
             oct.append(mult);
 
-            decimal -= (Math.pow(8, i)*mult);
+            decimal -= (Math.pow(8, i) * mult);
 
         }
 
@@ -177,7 +179,6 @@ public class Basics {
         return 123;
 
     }
-
 
 
 }
